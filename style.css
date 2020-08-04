@@ -1,0 +1,276 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    background: url(./images/Background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    min-width: 360px;
+    display: flex;
+}
+
+.menu {
+    margin: 0 auto;
+    padding-top: 123px;
+    width:100%;
+    max-width: 1440px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 67px;
+    color: #FFFFFF;
+    padding-bottom: 8px;
+}
+
+.subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding-bottom: 60px;
+}
+
+.level {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+    color: #FFFFFF;
+    padding-bottom: 24px;
+    width: 200px;
+}
+
+.level-selected {
+    position: relative;
+    color: #D62B2E;
+}
+
+.level-selected::before {
+    content: '';
+    background-image: url("./images/Rectangle 2.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    left: -40px;
+}
+
+.level:hover {
+    cursor: pointer;
+    color: #D62B2E;
+    position: relative;
+}
+
+.level:hover::before {
+    content: '';
+    background-image: url("./images/Rectangle 2.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    left: -40px;
+}
+
+.button__start {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: #FFFFFF;
+    background: #D62B2E;
+    border-radius: 7px;
+    border: none;
+    width: 352px;
+    height: 95px;
+    margin-top: 88px;
+}
+
+.cards {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+
+.cards-bottom {
+    position: absolute;
+    right: 65%;
+}
+.cards-top {
+    position: relative;
+}
+
+.gameScreen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 218px;
+    height: 341px;
+    background: transparent;
+    display: inline-block;
+    margin: 0 24px 24px 0;
+    position: relative;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.8s;
+}
+
+.card__inner {
+    position: absolute;
+}
+
+.card-hover:hover {
+    transform: translateY(-20px);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: .5s ease-in-out;
+}
+
+.card__click {
+    transition: .5s ease;
+}
+
+.card__click .loser__card {
+    transform: rotateY(0);
+}
+
+.card__click .winner__card {
+    transform: rotateY(0);
+}
+
+.card__container-hover{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transform: rotate(-3.08deg) translateY(-15px);
+}
+
+.card__backside {
+    background: url(./images/card-background.png) no-repeat;
+    border-radius: 7px;
+    height: 341px;
+    width: 218px;
+    backface-visibility: hidden;
+    position: absolute;
+   }
+
+.winner__card {
+    background: url(./images/bagcard.png);
+    height: 341px;
+    width: 218px;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    cursor: pointer;
+    position: absolute;
+}
+
+.loser__card {
+        background: url(./images/gameover.png);
+        height: 341px;
+        width: 218px;
+
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        cursor: pointer;
+        position: absolute;
+}
+
+.container-for-three {
+    padding-top: 100px;
+    max-width: 730px;
+
+}
+
+.container-for-six {
+    padding-top: 100px;
+    max-width: 730px;
+    padding-bottom: 30px;
+}
+
+.container-for-ten {
+    padding-top: 100px;
+    max-width: 1300px;
+    padding-bottom: 30px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .cards-bottom, .cards-top {
+        display: none;
+    }
+
+    .menu {
+        padding-left: 60px;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .cards-bottom, .cards-top {
+        display: none;
+    }
+
+    .menu {
+        padding-left: 45px;
+        padding-top: 30px;
+        padding-right: 10px;
+    }
+
+    .title {
+      font-size: 45px;
+      line-height: 53px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 30px;
+    }
+
+    .level {
+      font-size: 40px;
+      line-height: 45px;
+      padding-bottom: 10px;
+    }
+
+    .level-selected::before {
+    width: 26px;
+    height: 47px;
+  }
+
+    .button__start {
+      width: 266px;
+    }
+
+    .card, .card__backside, .winner__card, .loser__card  {
+        height: 230px;
+        width: 145px;
+        background-size: cover;
+       }
+
+}
